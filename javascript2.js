@@ -82,6 +82,7 @@ function removeElement(newArr) {
 removeElement(concept);
 console.log(concept);
 
+
 numberClusters = [
   [1, 2],
   [3, 4],
@@ -89,4 +90,54 @@ numberClusters = [
 ];
 
 const target = numberClusters[2][1];
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Cow', 'Terrorbird', 'Parotia', 'Kakapo'];
+ 
+for (const bird of strangeBirds) {
+  if  (bird === 'Cow'){
+    continue;
+  }
+  console.log(bird);
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+const nums = [1, 2, 3];
+ 
+for (let i = nums.length - 1; i >= 0; i--) {
+  console.log(nums[i]);
+}
+ 
+console.log('Time is up!');
+
+const spellingWord = 'hippopotamus';
+for (let i = 0; i < spellingWord.length; i++) {
+  
+    console.log(spellingWord[i]);
+
+}
+//////////////////////////////////////////////////////
+
+const spellingWord = 'hippopotamus';
+
+// Write your code below
+for (const letter of spellingWord) {
+  console.log(letter);
+}
+
+/////////////////////////////////////////////////////////////////
+
+const pokemonList = ['Pikachu', 'Charizard', 'Squirtle', 'Yoshi', 'Snorlax'];
+
+for (const letter of pokemonList) {
+  if(letter=== 'Yoshi'){
+    continue;
+    
+}
+console.log(`You caught a ${letter}!`);
+}
 
