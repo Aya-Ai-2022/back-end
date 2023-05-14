@@ -303,3 +303,88 @@ const dogFactory = (name, breed, weight) => {
 dogFactory("Joe", "Pug", 27);
 
 
+function factorial(x) {
+
+    // if number is 0
+    if (x == 0) {
+        return 1;
+    }
+
+    // if number is positive
+    else {
+        return x * factorial(x - 1);
+    }
+}
+console.log(factorial(6));
+
+
+
+//////////////////////////////////////////
+// function subLength(str,l){
+//   let c = 0;
+//   if(str.lastIndexOf(l)===str.indexof(l)){
+//     return 0;
+//   }
+//   for(let i= str.indexof(l); i< str.length ;i++){
+        
+//   }
+// }str.indexof(l)
+
+const subLength=(str,l)=>{
+      const re = new RegExp(l, 'g');
+
+    // matching the pattern
+    const count = str.match(re).length;
+   //if(str.lastIndexOf(l)===str.indexOf(l)){
+    if(count < 2 || count >2 ){
+    return 0;
+  }else{
+    return (str.lastIndexOf(l)-str.indexOf(l))+1;
+
+  }
+}
+// let str ='saas';
+// console.log((str.lastIndexOf('a')-str.indexOf('a'))+1);
+console.log(subLength('digitize', 'i'));
+
+//////////////////
+const subLength = (str, char) => {
+  let charCount = 0;
+  let len = -1;
+  
+  for (let i=0; i<str.length; i++) {
+    if (str[i] == char) {
+      charCount++;
+      if (charCount > 2) {
+        return 0;
+      }
+      if (len == -1) {
+        len = i;
+      } else {
+        len = i - len + 1
+      }
+    }
+  }
+  if (charCount < 2) {
+    return 0;
+  }
+
+  return len;
+};
+//////
+
+
+const groceries = list => {
+  let listString = ''
+
+  for (let i=0; i<list.length; i++) {
+    listString += list[i].item;
+    if (i < list.length - 2) {
+      listString += ', ';
+    } else if (i == list.length - 2){
+      listString += ' and ';
+    }
+  }
+  
+  return listString;
+}
