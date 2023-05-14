@@ -242,4 +242,64 @@ const dinner = [
 console.log(isTheDinnerVegan(dinner));
 // Should print false
 
+//13.
+// Write a function, findMyKeys(), that takes in an array of strings which may or may not contain 'keys'.
+// If the keys are in the array, your function should return the index at which they can be found. If they’re not in the array, your function should return -1.
+const findMyKeys = (arr) => {
+  return arr.includes("keys") ? arr.indexOf("keys") : -1;
+};
+
+const randomStuff = [
+  "credit card",
+  "screwdriver",
+  "receipt",
+  "gum",
+  "keys",
+  "used gum",
+  "plastic spoon",
+];
+
+console.log(findMyKeys(randomStuff));
+// Should print 4
+
+
+
+///
+
+
+const dogFactory = (name, breed, weight) => {
+  return {
+    _name: name,
+    _breed: breed,
+    _weight: weight,
+    set name(name) {
+      this._name = name;
+    },
+    set breed(breed) {
+      this._breed = breed;
+    },
+    set weight(weight) {
+      this._weight = weight;
+    },
+    get name() {
+      return this._name;
+    },
+    get breed() {
+      return this._breed;
+    },
+    get weight() {
+      return this._weight;
+    },
+
+    bark() {
+      return "ruff! ruff!";
+    },
+    eatTooManyTreats() {
+      return this._weight++;
+    },
+  };
+};
+
+dogFactory("Joe", "Pug", 27);
+
 
