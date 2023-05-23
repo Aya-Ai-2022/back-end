@@ -483,8 +483,17 @@ const balloonAttack = (player1, player2) => {
 
 
 
-
-
+/*
+use the buffer and timer modules to create two buffers, join them together, convert them to a string, and log the result to the console after 3 seconds.
+*/
+setTimeout(() => {
+  const buffer1 = Buffer.from('Hello');
+  const buffer2 = Buffer.from('learner');
+  const bufferArray = [buffer1, buffer2];
+  const bufferConcat = Buffer.concat(bufferArray);
+ 
+  console.log(bufferConcat.toString());
+}, 3000);
 
 
 
